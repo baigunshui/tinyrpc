@@ -1,0 +1,12 @@
+{
+    "tasks": [
+        {
+            "type": "shell",
+            "label": "build",
+            "command": "cd build && cmake --build . && cd ..",
+            "group": "build",
+            "problemMatcher": "$gcc"
+        }
+    ],
+    "version": "2.0.0"
+}
