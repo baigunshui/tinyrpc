@@ -94,6 +94,7 @@ std::stringstream& LogEvent::getStringStream() {
 }
 
 void LogEvent::log() {
+  // 现在看是没用，如果在多进程同时写同一个文件时，就不容易出现文件问题
   MutexLockGuard lock(m_mutex);
 	m_ss << "\n";
   std::cout << m_ss.str();
